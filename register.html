@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - EventTrack</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body class="register-page">
+    <div class="register-container">
+      <div class="register-card">
+        <div class="register-left">
+          <div class="register-logo">🎓</div>
+          <div class="register-image-circle">
+            <img
+              src="uploads/profile/sti.png"
+              alt="EventTrack"
+              style="
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                top: 0px;
+                right: -10px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </div>
+          <h1>Join EventTrack</h1>
+          <p>
+            Create your account to track attendance, manage events, and stay
+            connected with your school community.
+          </p>
+          <a class="back-to-login" href="index.php"
+            >Already have an account? Sign in</a
+          >
+        </div>
+        <div class="register-right">
+          <h2>Create Account</h2>
+          <p>Complete your information to get started.</p>
+          <form id="registrationForm" class="register-form">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Juan"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Dela Cruz"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="juan@example.com"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Create a password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                  <option value="" disabled selected>Select role</option>
+                  <option value="student">Student</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+              <div class="input-group hidden" id="studentNumberGroup">
+                <label for="studentNumber">Student Number</label>
+                <input
+                  type="text"
+                  id="studentNumber"
+                  name="studentNumber"
+                  placeholder="2025-001"
+                />
+              </div>
+              <div class="input-group hidden" id="employeeNumberGroup">
+                <label for="employeeNumber">Employee Number</label>
+                <input
+                  type="text"
+                  id="employeeNumber"
+                  name="employeeNumber"
+                  placeholder="EMP-00123"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="course">Course</label>
+                <input
+                  type="text"
+                  id="course"
+                  name="course"
+                  placeholder="e.g., BSIT"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="section">Section</label>
+                <input
+                  type="text"
+                  id="section"
+                  name="section"
+                  placeholder="Section A"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobileNumber"
+                  name="mobileNumber"
+                  placeholder="09123456789"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              class="form-message hidden"
+              id="formMessage"
+              role="alert"
+            ></div>
+            <button type="submit" class="register-submit">
+              Create Account
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="register.js" defer></script>
+  </body>
+</html>
